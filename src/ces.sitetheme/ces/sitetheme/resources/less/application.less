@@ -1,0 +1,47 @@
+// Custom application specific styles
+//--------------------------------------
+
+body > header {
+    margin-bottom: @line-height-computed;
+    #toolbar + nav {
+        margin-top: @navbar-height;
+    }
+}
+
+.documentDescription {
+  .lead();
+}
+
+// Some eample styles for portlets
+
+.portlet {
+  .portletHeader {
+    font-size: @font-size-base * 1.5;
+    padding: @line-height-computed / 2;
+    border-bottom: 1px solid @gray-light;
+  }
+  .portletItem {
+    padding: @padding-large-vertical;
+  }
+  .portletFooter {
+    padding: @padding-large-vertical;
+    font-size: @font-size-small;
+  }
+}
+
+// ces styles for listings (e.g. folder summary view)
+
+.tileItem {
+  .media();
+  .tileHeadline {
+    .media-heading();
+  }
+}
+
+
+// ces styles for a HMTL5 based site footer
+body > footer {
+    margin-top: @line-height-computed;
+    padding: @line-height-computed 0;
+    border-top: 1px solid @gray-lighter;
+}
