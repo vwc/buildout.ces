@@ -13,11 +13,11 @@ env.use_ssh_config = True
 env.forward_agent = True
 env.port = '22222'
 env.user = 'root'
-env.hosts = ['6zu4']
+env.hosts = ['6zu1']
 env.webserver = '/opt/webserver/buildout.webserver'
-env.code_root = '/opt/sites/ro/buildout.ro'
-env.local_root = '/Users/cb/devel/roconsulting/buildout.ro'
-env.sitename = 'ro'
+env.code_root = '/opt/sites/ces/buildout.ces'
+env.local_root = '/Users/cb/devel/ces/buildout.ces'
+env.sitename = 'ces'
 env.code_user = 'root'
 env.prod_user = 'www'
 

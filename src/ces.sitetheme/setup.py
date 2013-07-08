@@ -20,7 +20,7 @@ setup(name='ces.sitetheme',
       url='http://dist.vorwaerts-werbung.de',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['ro'],
+      namespace_packages=['ces'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
