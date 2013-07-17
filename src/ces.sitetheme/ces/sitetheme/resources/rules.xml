@@ -37,8 +37,8 @@
             <link rel="shortcut icon" href="/++theme++ces.sitetheme/img/favicon.ico" type="images/x-icon" />
         </after>-->
 
-        <after theme="/html/body"
-               content="//div[@data-iframe='plone-toolbar']" />
+        <before theme-children="/html/body"
+            content="//div[@data-iframe='plone-toolbar']" />
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
@@ -79,6 +79,8 @@
         <!-- ces for the fixed.html template -->
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
+
+        <drop theme="/html/body/script" />
 
     </rules>
 
