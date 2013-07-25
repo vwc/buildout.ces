@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2012-12-23 22:08+0000\n"
-"PO-Revision-Date: 2012-12-23 23:09+0100\n"
+"POT-Creation-Date: 2013-07-25 15:46+0000\n"
+"PO-Revision-Date: 2013-07-25 17:49+0100\n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <hallo@vorwaerts-werbung.de>\n"
 "MIME-Version: 1.0\n"
@@ -18,13 +18,13 @@ msgstr ""
 msgid "A fcontainer for blog entries"
 msgstr "Blog (Ordner für Blogbeiträge)"
 
+#: ./../profiles/default/types/ces.blog.landingpage.xml
+msgid "A frontpage type"
+msgstr "Landing Page"
+
 #: ./../profiles/default/types/ces.blog.blogentry.xml
 msgid "A single blogentry that can contain images"
 msgstr "Ein einzelner Blogbeitrag, der Bilder beinhalten kann"
-
-#: ./../blogentry.py:25
-msgid "Allow discussion on this item?"
-msgstr "Diskussion erlauben?"
 
 #: ./../portlets/archive.py:39
 #: ./../portlets/categories.py:27
@@ -35,11 +35,11 @@ msgstr "Archive Ansicht"
 msgid "Blog"
 msgstr "Blog"
 
-#: ./../portlets/archive.pt:5
+#: ./../portlets/archive.pt:7
 msgid "Blog Archive"
 msgstr "Archiv"
 
-#: ./../blogentry.py:20
+#: ./../blogentry.py:22
 msgid "Blog Entry"
 msgstr "Blogbeitrag"
 
@@ -51,7 +51,11 @@ msgstr "Archive Blogartikel"
 msgid "BlogEntry"
 msgstr "Blogbeitrag"
 
-#: ./../portlets/categories.pt:6
+#: ./../landingpage.py:24
+msgid "Body Text"
+msgstr "Haupttext"
+
+#: ./../portlets/categories.pt:7
 #: ./../portlets/categories.py:51
 msgid "Categories"
 msgstr "Themen"
@@ -60,11 +64,19 @@ msgstr "Themen"
 msgid "Entries"
 msgstr "Beiträge"
 
+#: ./../profiles/default/types/ces.blog.landingpage.xml
+msgid "LandingPage"
+msgstr "Landing Page"
+
 #: ./../portlets/blogrecent.py:48
 msgid "Last entries"
 msgstr "Letzte Beiträge"
 
-#: ./../blogentry.py:21
+#: ./../blogentry.py:27
+msgid "Mark this entry as pressrelease?"
+msgstr "Diesen Artikel als Pressemitteilung markieren"
+
+#: ./../blogentry.py:23
 msgid "Please enter main body text for this blog entry"
 msgstr "Geben Sie hier den Haupttext für diesen Blogbeitrag ein"
 

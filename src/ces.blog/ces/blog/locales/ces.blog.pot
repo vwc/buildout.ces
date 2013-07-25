@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-12-23 22:08+0000\n"
+"POT-Creation-Date: 2013-07-25 15:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 msgid "A fcontainer for blog entries"
 msgstr ""
 
-#: ./../profiles/default/types/ces.blog.blogentry.xml
-msgid "A single blogentry that can contain images"
+#: ./../profiles/default/types/ces.blog.landingpage.xml
+msgid "A frontpage type"
 msgstr ""
 
-#: ./../blogentry.py:25
-msgid "Allow discussion on this item?"
+#: ./../profiles/default/types/ces.blog.blogentry.xml
+msgid "A single blogentry that can contain images"
 msgstr ""
 
 #: ./../portlets/archive.py:39
@@ -38,11 +38,11 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: ./../portlets/archive.pt:5
+#: ./../portlets/archive.pt:7
 msgid "Blog Archive"
 msgstr ""
 
-#: ./../blogentry.py:20
+#: ./../blogentry.py:22
 msgid "Blog Entry"
 msgstr ""
 
@@ -54,7 +54,11 @@ msgstr ""
 msgid "BlogEntry"
 msgstr ""
 
-#: ./../portlets/categories.pt:6
+#: ./../landingpage.py:24
+msgid "Body Text"
+msgstr ""
+
+#: ./../portlets/categories.pt:7
 #: ./../portlets/categories.py:51
 msgid "Categories"
 msgstr ""
@@ -63,11 +67,19 @@ msgstr ""
 msgid "Entries"
 msgstr ""
 
+#: ./../profiles/default/types/ces.blog.landingpage.xml
+msgid "LandingPage"
+msgstr ""
+
 #: ./../portlets/blogrecent.py:48
 msgid "Last entries"
 msgstr ""
 
-#: ./../blogentry.py:21
+#: ./../blogentry.py:27
+msgid "Mark this entry as pressrelease?"
+msgstr ""
+
+#: ./../blogentry.py:23
 msgid "Please enter main body text for this blog entry"
 msgstr ""
 
