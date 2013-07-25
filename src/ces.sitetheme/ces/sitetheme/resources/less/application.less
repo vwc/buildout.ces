@@ -2,15 +2,6 @@
 //--------------------------------------
 
 
-body {
-    //background: #f5f5f5;
-}
-
-body > header {
-    margin-bottom: @line-height-computed;
-}
-
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Merriweather Sans';
@@ -27,6 +18,40 @@ p.lead {
 input.context {
   margin-right: @line-height-computed / 2;
 }
+
+// Site header hero unit
+
+.hero-unit {
+    background: @brand-primary;
+    //#gradient > .vertical(@brand-primary, 0%, #870000, 100%);
+    padding: 0 0 @line-height-computed / 2 @line-height-computed / 2;
+    min-height: 110px;
+    h1 {
+      font-weight: 500;
+      color: #000;
+    }
+    .hero-claim {
+      padding: @line-height-computed / 2  @line-height-computed 0 0;
+      font-weight: 400;
+      font-size: @font-size-base * 2.5;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+    .hero-brand-container {
+        text-align: right;
+    }
+    .hero-brand {
+        display: block;
+        .size(200px, 100px);
+        background:url(../img/die-linke-kreisverband-augsburg.jpg) no-repeat 0 0 transparent;
+        text-indent: -9999px;
+        overflow: hidden;
+        margin-right: @line-height-computed;
+    }
+}
+
 
 #toolbar + #topbar {
     margin-top: @navbar-height;

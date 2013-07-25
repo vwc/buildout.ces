@@ -6933,9 +6933,6 @@ table.grid th {
   font-weight: normal;
   font-style: normal;
 }
-body > header {
-  margin-bottom: 20px;
-}
 h1,
 h2,
 h3,
@@ -6959,6 +6956,36 @@ p.lead {
 }
 input.context {
   margin-right: 10px;
+}
+.hero-unit {
+  background: #6fbc1a;
+  padding: 0 0 10px 10px;
+  min-height: 110px;
+}
+.hero-unit h1 {
+  font-weight: 500;
+  color: #000;
+}
+.hero-unit .hero-claim {
+  padding: 10px 20px 0 0;
+  font-weight: 400;
+  font-size: 35px;
+  color: #fff;
+}
+.hero-unit .hero-claim a {
+  color: #fff;
+}
+.hero-unit .hero-brand-container {
+  text-align: right;
+}
+.hero-unit .hero-brand {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/die-linke-kreisverband-augsburg.jpg) no-repeat 0 0 transparent;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin-right: 20px;
 }
 #toolbar + #topbar {
   margin-top: 50px;
