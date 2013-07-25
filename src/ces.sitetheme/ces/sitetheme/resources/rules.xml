@@ -46,14 +46,7 @@
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
         <!-- Logo (link target) -->
-        <copy attributes="href" css:content="#portal-logo" css:theme="#navbar-brand" />
-
-        <!-- Site actions -->
-        <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
-
-        <!-- Portal searchbox -->
-        <!--<copy attributes="action" css:content="#portal-searchbox form"
-            css:theme="#portal-searchbox" />-->
+        <copy attributes="href" css:content="#portal-logo" css:theme=".hero-link" />
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
@@ -62,6 +55,13 @@
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'
             css:theme-children='#breadcrumbs' />
+
+        <rules css:if-content="body.template-blog-view">
+            <replace css:content-children="#hero-unit" 
+                css:theme-children="#hero-unit" />
+            <replace css:content-children="#content-core" 
+                css:theme-children="#content" />
+        </rules>
 
         <!-- Document Content -->
         <replace css:content-children="#content" 
@@ -72,13 +72,8 @@
             css:theme-children="#below-main-content" />
 
         <!-- Columns -->
-        <replace css:content-children="#portal-column-one > *"
-            css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar-right" />
-        <!-- ces for the fixed.html template -->
-        <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar" />
+            css:theme-children="#sidebar-content" />
 
         <drop theme="/html/body/script" />
 

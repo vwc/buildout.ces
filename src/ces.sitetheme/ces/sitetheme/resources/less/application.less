@@ -22,9 +22,10 @@ input.context {
 // Site header hero unit
 
 .hero-unit {
-    background: url(../img/hero-unit-bg.jpg) no-repeat 0 0 @brand-primary;
+    //background: url(../img/hero-unit-bg.jpg) no-repeat 100% 0 @brand-primary;
+    background: @brand-primary;
     padding: 0 0 @line-height-computed / 2 @line-height-computed / 2;
-    min-height: 316px;
+    min-height: 116px;
     h1 {
       font-weight: 500;
       color: #000;
@@ -48,7 +49,6 @@ input.context {
         text-indent: -9999px;
         overflow: hidden;
         margin-right: @line-height-computed;
-        border: 1px solid red;
     }
 }
 
@@ -105,6 +105,10 @@ input.context {
   }
 }
 
+
+.page-content {
+  padding-bottom: @line-height-computed;
+}
 
 
 // Blog specific styles
@@ -218,7 +222,24 @@ body > footer {
 
 // responsive fixes
 
+// Tablets & small desktops only
+@media (min-width: @screen-tablet) {
+  .hero-unit {
+    background: url(../img/hero-unit-bg.jpg) no-repeat 100% 0 @brand-primary;
+    min-height: 316px;
+  }
+}
+
 @media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
+  #brandname {
+    background:url(../img/claudia-eser-schuberth.png) no-repeat 0 0 transparent;
+    display: block;
+    .size(640px, 315px);
+    //position:absolute;
+    z-index: 1;
+    text-indent: -3000px;
+    overflow:hidden;
+  }
   .hero-unit h1 {
     margin-left: 300px;
   }
@@ -238,15 +259,6 @@ body > footer {
   .hero-unit h1,
   .hero-unit img {
     margin-left: 300px;
-  }
-  body.template-blog-view {
-    .hero-unit {
-      background:url(../img/portrait-full.png) no-repeat 0 100% transparent !important;
-      min-height: 330px !important;
-      .hero-claim {
-        padding: @line-height-computed * 2 @line-height-computed * 4 @line-height-computed @navbar-height * 6 !important;
-      }
-    }
   }
 }
 

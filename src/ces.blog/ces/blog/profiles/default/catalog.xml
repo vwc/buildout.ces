@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object name="portal_catalog">
+    <index name="pressitem" meta_type="BooleanIndex">
+        <indexed_attr value="pressitem"/>
+    </index>
+    <column value="pressitem"/>
+</object>

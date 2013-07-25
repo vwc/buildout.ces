@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="ces.blog">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+  <header class="content-header">
+    <h1 class="documentFirstHeading" tal:content="context/Title" />
+  </header>
+  <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/introduction" />
+
+  <div class="alert" tal:condition="not:view/has_pressitem">
+    <h3>Hinweis</h3>
+    <p>Im Augenblick liegen keine Pressemitteilungen vor</p>
+  </div>
+
+  <section id="blog-view"
+    class="blog-list visualClear"
+    tal:condition="view/has_pressitem"
+    tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                Batch python:modules['Products.CMFPlone'].Batch;
+                b_size python:int(request.get('b_size', 20));
+                b_start python:int(request.get('b_start', 0));
+                results view/pressitems;
+                batch python:Batch(results, b_size, b_start);">
+
+    <tal:block tal:repeat="item batch">
+      <article class="blog-list-entry">
+        <div class="page-header">
+          <h2>
+            <small tal:content="python:toLocalizedTime(item.effective)" />
+            <small>&middot; Pressemitteilung</small>
+            <br />
+            <a href=""
+                tal:attributes="href item/getURL"
+                tal:content="item/Title" />
+          </h2>
+        </div>
+          <p tal:condition="item/Description"
+            class="blog-entry-description"
+            tal:content="item/Description" />
+
+          <footer>
+            <a href="" class="xlink-more xpull-right"
+              tal:attributes="href item/getURL">
+              <i class="icon-chevron-sign-right"></i>
+              Weiterlesen</a>
+          </footer>
+      </article>
+      <hr>
+    </tal:block>
+     <div metal:use-macro="context/batch_macros/macros/navigation" />
+  </section>
+  <div id="blog-link">
+    <a href="" class="btn btn-default btn-block"
+      tal:define="portal_url context/portal_url"
+      tal:attributes="href python:portal_url + '/blog'">
+      <i class="icon-plus-sign" />
+      Weitere Artikel</a>
+  </div>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>

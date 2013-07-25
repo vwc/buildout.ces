@@ -1,0 +1,10 @@
+<section id="infobar">
+  <div class="well">
+  <a href=""
+    tal:define="portal_url context/portal_url"
+    tal:attributes="href python:portal_url + '/blog/rss'">
+    <i class="icon-rss icon-x-large" />
+  </a>
+  </div>
+
+</section>

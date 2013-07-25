@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="ces.blog">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+  <section
+    tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
+      <article class="blog-entry">
+        <header class="page-header">
+          <h1>
+            <small tal:content="python:toLocalizedTime(context.EffectiveDate())" /><br />
+            <span tal:content="context/Title">Title inserted here</span>
+          </h1>
+        </header>
+        <section tal:condition="context/text">
+          <div tal:replace="structure context/text/output" />
+        </section>
+        <aside>
+          <div tal:content="structure provider:plone.belowcontenttitle" />
+        </aside>
+      </article>
+  </section>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

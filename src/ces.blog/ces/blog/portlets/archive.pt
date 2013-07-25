@@ -1,0 +1,28 @@
+<div class="tile"
+     id="infobox-blog-archive"
+     i18n:domain="ces.blog">
+  <div class="page-header">
+    <h3>
+      <i class="icon-time"></i>
+      <i18n:block translate="">Blog Archive</i18n:block>
+    </h3>
+  </div>
+  <ul class="nav nav-list">
+    <tal:block tal:repeat="year view/years">
+      <li class="xxnav-header" tal:content="year">1999</li>
+      <li tal:repeat="month python:view.months(year)">
+            <a tal:attributes="href python:view.archive_url(year, month)">
+                <span class="archive-month"
+                    tal:content="string:month_${month}"
+                    i18n:translate="">
+                    January
+                </span>
+                <span class="archive-count">
+                    (<tal:block content="python:view.count(year, month)">0</tal:block>)
+                </span>
+            </a>
+        </li>
+   </tal:block>
+  </ul>
+
+</div>
