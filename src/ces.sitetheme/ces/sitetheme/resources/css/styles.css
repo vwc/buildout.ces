@@ -7035,6 +7035,9 @@ input.context {
 .blog-list .blog-list-entry .page-header h2 {
   margin: 0px;
 }
+.sidebar-content {
+  margin-bottom: 20px;
+}
 .tile-twr {
   padding: 20px 0;
 }
