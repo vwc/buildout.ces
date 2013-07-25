@@ -1,27 +1,179 @@
 // Custom application specific styles
 //--------------------------------------
 
-body > header {
-    margin-bottom: @line-height-computed;
-    #toolbar + nav {
-        margin-top: @navbar-height;
-    }
+
+body {
+    //background: #f5f5f5;
 }
 
-.documentDescription {
-  .lead();
+body > header {
+    margin-bottom: @line-height-computed;
 }
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Merriweather Sans';
+    font-weight: 400;
+}
+
+p.lead {
+  font-family: 'Merriweather Sans';
+  font-weight: 400;
+  font-style: italic;
+  .text-muted();
+}
+
+input.context {
+  margin-right: @line-height-computed / 2;
+}
+
+#toolbar + #topbar {
+    margin-top: @navbar-height;
+}
+
+#topbar {
+  .nav > li {
+    > a {
+      color: @gray;
+      text-transform: uppercase;
+      &:hover {
+        color: @gray-dark;
+        background-color: @body-bg;
+        border-radius: 0px;
+      }
+    }
+    &.active > a,
+    &.selected > a,
+    &.active > a:hover,
+    &.selected > a:hover,
+    &.active > a:focus {
+      color: @brand-primary;
+      background-color: @body-bg;
+      border-radius: 0px;
+      border-bottom-color: transparent;
+      cursor: default;
+    }
+  }
+}
+
+#topbar-brand {
+  h3 {
+    color: #000;
+    margin-bottom: 0px;
+    font-size: ceil(@font-size-base * 2.5);
+    > a,
+    > a:hover {
+      color: #000;
+    }
+  }
+  h5 {
+    color: @gray-light;
+    margin-top: 0px;
+  }
+}
+
+.topbar-inner {
+  border-top: 5px solid #000;
+  .main-navbar {
+    padding: @line-height-computed * 1.5 0;
+  }
+  #brandname {
+    font-size: @font-size-base * 2.25;
+    font-weight: 700;
+    display: block;
+    color: #000;
+  //  background:url(../img/badge.png) no-repeat 0 0 transparent;
+  //  display: block;
+  //  .size(340px, 245px);
+  //  position:absolute;
+  //  z-index: 1;
+  //  text-indent: -3000px;
+  //  overflow:hidden;
+  //  .background-size(cover);
+  }
+}
+
+#hero-unit {
+  background: @brand-primary;
+  margin: @line-height-computed 0;
+  .hero-unit {
+    background:url(../img/eyes-inverse.png) no-repeat 0 0 transparent;
+    padding: @line-height-computed * 1.5 0 @line-height-computed / 2 @line-height-computed / 2;
+    min-height: 110px;
+    h1 {
+      font-family: 'Ubuntu';
+      font-weight: 700;
+      color: #000;
+    }
+    .hero-claim {
+      padding: @line-height-computed  @line-height-computed 0 0;
+      font-family: 'Ubuntu';
+      font-weight: 700;
+      font-size: @font-size-base * 1.5;
+    }
+  }
+}
+
+// Blog specific styles
+
+.blog-list {
+  .blog-list-entry {
+    .page-header {
+      background: @gray-lighter;
+      padding: @line-height-computed / 2;
+      h2 {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.tile-twr {
+  padding: @line-height-computed 0;
+}
+
+.tile-cta {
+  margin-bottom: @line-height-computed;
+}
+
 
 // Some eample styles for portlets
 
 .portlet {
   .portletHeader {
+    font-family: 'Merriweather Sans';
+    font-weight: 400;
     font-size: @font-size-base * 1.5;
-    padding: @line-height-computed / 2;
+    padding: @padding-large-vertical;
     border-bottom: 1px solid @gray-light;
+    &:before {
+      content: "\f099";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      *margin-right: .3em; // fixes ie7 issues
+    }
   }
   .portletItem {
+    .media();
     padding: @padding-large-vertical;
+    border-bottom: 1px solid @gray-lighter;
+    .tweetPicture {
+      .media-object();
+      img {
+        .img-thumbnail();
+        border-radius: 0;
+      }
+    }
+    .tweetBody {
+      .text-muted();
+    }
+    .tweetDate {
+      font-size: @font-size-small;
+    }
   }
   .portletFooter {
     padding: @padding-large-vertical;
@@ -29,7 +181,7 @@ body > header {
   }
 }
 
-// ces styles for listings (e.g. folder summary view)
+// erben styles for listings (e.g. folder summary view)
 
 .tileItem {
   .media();
@@ -38,10 +190,76 @@ body > header {
   }
 }
 
+.documentDescription {
+  .lead();
+}
 
-// ces styles for a HMTL5 based site footer
+#blog-entry-meta {
+  padding: @line-height-computed * 2.5 @line-height-computed 0 0;
+  .icon-stack {
+    font-size: @font-size-base * 4.5;
+    color: @gray;
+  }
+}
+
+
+// erben styles for a HMTL5 based site footer
 body > footer {
+    background: @brand-primary;
     margin-top: @line-height-computed;
     padding: @line-height-computed 0;
     border-top: 1px solid @gray-lighter;
+    .footer-content  a {
+      color: @gray-lighter;
+    }
+    #site-footer-social-links a {
+      color: @gray-dark;
+      text-decoration: none;
+    }
+}
+
+
+// responsive fixes
+
+@media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
+  .hero-unit h1 {
+    margin-left: 300px;
+  }
+}
+
+// Responsive: Desktops and up
+@media screen and (min-width: @screen-desktop) {
+  #brandname {
+    background:url(../img/badge.png) no-repeat 0 0 transparent;
+    display: block;
+    .size(340px, 245px);
+    position:absolute;
+    z-index: 1;
+    text-indent: -3000px;
+    overflow:hidden;
+    .background-size(cover);
+  }
+  .hero-unit h1,
+  .hero-unit img {
+    margin-left: 300px;
+  }
+  body.template-blog-view {
+    .hero-unit {
+      background:url(../img/portrait-full.png) no-repeat 0 100% transparent !important;
+      min-height: 330px !important;
+      .hero-claim {
+        padding: @line-height-computed * 2 @line-height-computed * 4 @line-height-computed @navbar-height * 6 !important;
+      }
+    }
+  }
+}
+
+// Responsive: Large desktops and up
+@media screen and (min-width: @screen-large-desktop) {
+  #content {
+      font-size: @font-size-base + 2;
+  }
+  .hero-claim {
+    padding-top: @line-height-computed !important;
+  }
 }
