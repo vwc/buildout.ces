@@ -6958,9 +6958,9 @@ input.context {
   margin-right: 10px;
 }
 .hero-unit {
-  background: #6fbc1a;
+  background: url(../img/hero-unit-bg.jpg) no-repeat 0 0 #6fbc1a;
   padding: 0 0 10px 10px;
-  min-height: 110px;
+  min-height: 316px;
 }
 .hero-unit h1 {
   font-weight: 500;
@@ -6982,33 +6982,44 @@ input.context {
   display: block;
   width: 200px;
   height: 100px;
-  background: url(../img/die-linke-kreisverband-augsburg.jpg) no-repeat 0 0 transparent;
+  background: url(../img/claudia-eser-schuberth.png) no-repeat 0 0 transparent;
   text-indent: -9999px;
   overflow: hidden;
   margin-right: 20px;
+  border: 1px solid red;
 }
-#toolbar + #topbar {
-  margin-top: 50px;
+.topbar {
+  border-top: 10px solid #6fbc1a;
 }
-#topbar .nav > li > a {
-  color: #555555;
+.topbar .navbar-main {
+  padding-left: 0px;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 2px solid #6fbc1a;
+}
+.topbar .nav > li > a {
+  color: #333333;
+  font-weight: 700;
   text-transform: uppercase;
 }
-#topbar .nav > li > a:hover {
-  color: #333333;
-  background-color: #ffffff;
+.topbar .nav > li > a:hover {
   border-radius: 0px;
 }
-#topbar .nav > li.active > a,
-#topbar .nav > li.selected > a,
-#topbar .nav > li.active > a:hover,
-#topbar .nav > li.selected > a:hover,
-#topbar .nav > li.active > a:focus {
-  color: #6fbc1a;
-  background-color: #ffffff;
+.topbar .nav > li.active > a,
+.topbar .nav > li.selected > a,
+.topbar .nav > li.active > a:hover,
+.topbar .nav > li.selected > a:hover,
+.topbar .nav > li.active > a:focus {
+  color: #fff;
+  background-color: #6fbc1a;
   border-radius: 0px;
   border-bottom-color: transparent;
   cursor: default;
+}
+#topbar-brand {
+  border: 1px solid #999999;
+  background: #eeeeee;
+  padding: 20px;
 }
 #topbar-brand h3 {
   color: #000;
@@ -7022,38 +7033,6 @@ input.context {
 #topbar-brand h5 {
   color: #999999;
   margin-top: 0px;
-}
-.topbar-inner {
-  border-top: 5px solid #000;
-}
-.topbar-inner .main-navbar {
-  padding: 30px 0;
-}
-.topbar-inner #brandname {
-  font-size: 31.5px;
-  font-weight: 700;
-  display: block;
-  color: #000;
-}
-#hero-unit {
-  background: #6fbc1a;
-  margin: 20px 0;
-}
-#hero-unit .hero-unit {
-  background: url(../img/eyes-inverse.png) no-repeat 0 0 transparent;
-  padding: 30px 0 10px 10px;
-  min-height: 110px;
-}
-#hero-unit .hero-unit h1 {
-  font-family: 'Ubuntu';
-  font-weight: 700;
-  color: #000;
-}
-#hero-unit .hero-unit .hero-claim {
-  padding: 20px 20px 0 0;
-  font-family: 'Ubuntu';
-  font-weight: 700;
-  font-size: 21px;
 }
 .blog-list .blog-list-entry .page-header {
   background: #eeeeee;
@@ -7164,18 +7143,13 @@ body > footer #site-footer-social-links a {
 }
 @media screen and (min-width: 992px) {
   #brandname {
-    background: url(../img/badge.png) no-repeat 0 0 transparent;
+    background: url(../img/claudia-eser-schuberth.png) no-repeat 0 0 transparent;
     display: block;
-    width: 340px;
-    height: 245px;
-    position: absolute;
+    width: 640px;
+    height: 315px;
     z-index: 1;
     text-indent: -3000px;
     overflow: hidden;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
   .hero-unit h1,
   .hero-unit img {

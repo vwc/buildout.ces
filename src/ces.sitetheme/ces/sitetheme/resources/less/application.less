@@ -22,10 +22,9 @@ input.context {
 // Site header hero unit
 
 .hero-unit {
-    background: @brand-primary;
-    //#gradient > .vertical(@brand-primary, 0%, #870000, 100%);
+    background: url(../img/hero-unit-bg.jpg) no-repeat 0 0 @brand-primary;
     padding: 0 0 @line-height-computed / 2 @line-height-computed / 2;
-    min-height: 110px;
+    min-height: 316px;
     h1 {
       font-weight: 500;
       color: #000;
@@ -45,26 +44,31 @@ input.context {
     .hero-brand {
         display: block;
         .size(200px, 100px);
-        background:url(../img/die-linke-kreisverband-augsburg.jpg) no-repeat 0 0 transparent;
+        background:url(../img/claudia-eser-schuberth.png) no-repeat 0 0 transparent;
         text-indent: -9999px;
         overflow: hidden;
         margin-right: @line-height-computed;
+        border: 1px solid red;
     }
 }
 
 
-#toolbar + #topbar {
-    margin-top: @navbar-height;
-}
-
-#topbar {
+.topbar {
+    border-top: @line-height-computed / 2 solid @brand-primary;
+    .navbar-main {
+        padding-left: 0px;
+        border-radius: 0;
+        background:transparent;
+        border-bottom: 2px solid @brand-primary;
+    }
   .nav > li {
     > a {
-      color: @gray;
+      color: @gray-dark;
+      font-weight: 700;
       text-transform: uppercase;
       &:hover {
-        color: @gray-dark;
-        background-color: @body-bg;
+        //color: @gray-dark;
+        //background-color: @body-bg;
         border-radius: 0px;
       }
     }
@@ -73,8 +77,8 @@ input.context {
     &.active > a:hover,
     &.selected > a:hover,
     &.active > a:focus {
-      color: @brand-primary;
-      background-color: @body-bg;
+      color: #fff;
+      background-color: @brand-primary;
       border-radius: 0px;
       border-bottom-color: transparent;
       cursor: default;
@@ -83,6 +87,9 @@ input.context {
 }
 
 #topbar-brand {
+  border: 1px solid @gray-light;
+  background: @gray-lighter;
+  padding: @line-height-computed;
   h3 {
     color: #000;
     margin-bottom: 0px;
@@ -98,47 +105,7 @@ input.context {
   }
 }
 
-.topbar-inner {
-  border-top: 5px solid #000;
-  .main-navbar {
-    padding: @line-height-computed * 1.5 0;
-  }
-  #brandname {
-    font-size: @font-size-base * 2.25;
-    font-weight: 700;
-    display: block;
-    color: #000;
-  //  background:url(../img/badge.png) no-repeat 0 0 transparent;
-  //  display: block;
-  //  .size(340px, 245px);
-  //  position:absolute;
-  //  z-index: 1;
-  //  text-indent: -3000px;
-  //  overflow:hidden;
-  //  .background-size(cover);
-  }
-}
 
-#hero-unit {
-  background: @brand-primary;
-  margin: @line-height-computed 0;
-  .hero-unit {
-    background:url(../img/eyes-inverse.png) no-repeat 0 0 transparent;
-    padding: @line-height-computed * 1.5 0 @line-height-computed / 2 @line-height-computed / 2;
-    min-height: 110px;
-    h1 {
-      font-family: 'Ubuntu';
-      font-weight: 700;
-      color: #000;
-    }
-    .hero-claim {
-      padding: @line-height-computed  @line-height-computed 0 0;
-      font-family: 'Ubuntu';
-      font-weight: 700;
-      font-size: @font-size-base * 1.5;
-    }
-  }
-}
 
 // Blog specific styles
 
@@ -260,14 +227,13 @@ body > footer {
 // Responsive: Desktops and up
 @media screen and (min-width: @screen-desktop) {
   #brandname {
-    background:url(../img/badge.png) no-repeat 0 0 transparent;
+    background:url(../img/claudia-eser-schuberth.png) no-repeat 0 0 transparent;
     display: block;
-    .size(340px, 245px);
-    position:absolute;
+    .size(640px, 315px);
+    //position:absolute;
     z-index: 1;
     text-indent: -3000px;
     overflow:hidden;
-    .background-size(cover);
   }
   .hero-unit h1,
   .hero-unit img {
