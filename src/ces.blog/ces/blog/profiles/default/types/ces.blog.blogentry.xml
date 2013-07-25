@@ -24,7 +24,6 @@
      <element value="plone.app.dexterity.behaviors.metadata.ICategorization" />
      <element value="plone.app.dexterity.behaviors.metadata.IPublication" />
      <element value="plone.app.dexterity.behaviors.nextprevious.INextPreviousEnabled" />
-     <element value="collective.upload.behaviors.IMultipleUpload" />
    </property>
 
   <!-- View information -->
