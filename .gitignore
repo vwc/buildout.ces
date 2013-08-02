@@ -28,8 +28,8 @@ src/plone.app.contenttypes
 src/plone.app.tiles
 src/plone.tiles
 src/ade25.fabfiles
+src/ade25.toolbar
 src/vwc.tiles
-src/vwc.toolbar
 src/vwc.typekit
 src/sauna.reload
 src/watchdog
