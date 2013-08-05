@@ -37,13 +37,19 @@
             <link rel="shortcut icon" href="/++theme++ces.sitetheme/img/favicon.ico" type="images/x-icon" />
         </after>-->
 
-        <before theme-children="/html/body"
-            content="//div[@data-iframe='plone-toolbar']" />
+        <!--<before theme-children="/html/body"
+            content="//div[@data-iframe='plone-toolbar']" />-->
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
+
+        <drop css:theme="#editbar-wrapper"
+            css:if-content="#anon-personalbar" />
+        <!--<replace css:theme-children="#editbar" css:content="#edit-bar" />-->
+        <replace css:theme="#toolbar"
+            css:content="#toolbar" />
 
         <!-- Logo (link target) -->
         <copy attributes="href" css:content="#portal-logo" css:theme=".hero-link" />
