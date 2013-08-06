@@ -25,6 +25,26 @@
   <body>
     <div class="navbar xnavbar-inverse navbar-fixed-top" id="toolbar">
         <a class="navbar-brand" href="#">Plone Toolbar</a>
+        <ul class="nav navbar-nav pull-right">
+        <li id="plone-personal-actions" class="dropdown">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="http://ces.coraggio.de/author/zope-admin">
+            <span>zope-admin</span>
+            <b class="caret">
+          </b></a>
+          <ul class="dropdown-menu"><li id="plone-personal-actions-dashboard">
+              <a href="http://ces.coraggio.de/dashboard">Persönliche Seite</a>
+            </li>
+            <li id="plone-personal-actions-preferences">
+              <a href="http://ces.coraggio.de/@@personal-preferences">Meine Einstellungen</a>
+            </li>
+            <li id="plone-personal-actions-plone_setup">
+              <a href="http://ces.coraggio.de/@@overview-controlpanel">Konfiguration</a>
+            </li>
+            <li id="plone-personal-actions-logout">
+              <a href="http://ces.coraggio.de/logout">Abmelden</a>
+            </li>
+          </ul></li>
+      </ul>
     </div>
     <header class="container">
         <div class="hero-unit">
@@ -143,8 +163,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/application.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/application.js"></script>
     <script type="text/javascript">
     WebFontConfig = {
       google: { families: [ 'Ubuntu:400,700:latin', 'Merriweather:400,400italic,700italic,700:latin' ] }
