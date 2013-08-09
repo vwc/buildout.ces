@@ -42,7 +42,7 @@
 
         <fieldset id="search-field" i18n:domain="plone" class="noborder">
           <div classd="input-group">
-            <input class="searchPage"
+            <input class="form-control searchPage"
                    name="SearchableText"
                    type="text"
                    size="25"
