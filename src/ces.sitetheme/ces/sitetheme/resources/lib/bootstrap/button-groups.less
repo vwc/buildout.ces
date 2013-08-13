@@ -3,11 +3,32 @@
 // --------------------------------------------------
 
 // Button carets
-.btn .caret {
-  border-top-color: @btn-default-color;
+//
+// Match the button text color to the arrow/caret for indicating dropdown-ness.
+
+.caret {
+  .btn-default & {
+    border-top-color: @btn-default-color;
+  }
+  .btn-primary &,
+  .btn-success &,
+  .btn-warning &,
+  .btn-danger &,
+  .btn-info & {
+    border-top-color: #fff;
+  }
 }
-.dropup .btn .caret {
-  border-bottom-color: @btn-default-color;
+.dropup .caret {
+  .btn-default & {
+    border-bottom-color: @btn-default-color;
+  }
+  .btn-primary &,
+  .btn-success &,
+  .btn-warning &,
+  .btn-danger &,
+  .btn-info & {
+    border-bottom-color: #fff;
+  }
 }
 
 // Make the div behave like a button
@@ -26,11 +47,18 @@
     &.active {
       z-index: 2;
     }
+    &:focus {
+      // Remove focus outline when dropdown JS adds it after closing the menu
+      outline: none;
+    }
   }
 }
 
 // Prevent double borders when buttons are next to each other
-.btn-group .btn + .btn {
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
 
@@ -92,6 +120,14 @@
 }
 
 
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-xs > .btn { .btn-xs(); }
+.btn-group-sm > .btn { .btn-sm(); }
+.btn-group-lg > .btn { .btn-lg(); }
+
 
 // Split button dropdowns
 // ----------------------
@@ -119,11 +155,11 @@
 }
 // Carets in other button sizes
 .btn-lg .caret {
-  border-width: 5px;
+  border-width: @caret-width-large;
 }
 // Upside down carets for .dropup
 .dropup .btn-lg .caret {
-  border-bottom-width: 5px;
+  border-bottom-width: @caret-width-large;
 }
 
 
@@ -168,7 +204,7 @@
 
 
 // Checkbox and radio options
-.btn-group[data-toggle="buttons"] > .btn > input[type="radio"],
-.btn-group[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+[data-toggle="buttons"] > .btn > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"] {
   display: none;
 }

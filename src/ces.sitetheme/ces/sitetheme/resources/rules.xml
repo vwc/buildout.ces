@@ -31,11 +31,14 @@
         <drop theme="/html/head/script" />
         <drop theme="/html/head/link" />
 
-        <!-- Custom favicon implementation -->
-        <!--<drop content="link[@type='image/x-icon']" />
+        <drop content="link[@type='image/x-icon']" />
         <after theme="/html/head">
-            <link rel="shortcut icon" href="/++theme++ces.sitetheme/img/favicon.ico" type="images/x-icon" />
-        </after>-->
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/++theme++oh.sitetheme/assets/ico/apple-touch-icon-144-precomposed.png" />
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/++theme++oh.sitetheme/assets/ico/apple-touch-icon-114-precomposed.png" />
+            <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="/++theme++oh.sitetheme/assets/ico/apple-touch-icon-72-precomposed.png" />
+            <link rel="apple-touch-icon-precomposed"                 href="/++theme++oh.sitetheme/assets/ico/apple-touch-icon-57-precomposed.png" />
+            <link rel="shortcut icon"                                href="/++theme++oh.sitetheme/assets/ico/favicon.png" />
+        </after>
 
         <!--<before theme-children="/html/body"
             content="//div[@data-iframe='plone-toolbar']" />-->
